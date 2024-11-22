@@ -60,27 +60,32 @@ class WeatherService {
   private parseCurrentWeather(data: any): Weather {
     const { name: city } = data.city;
     const {
-      dt_txt: date,
+      dt_txt,
       main: { temp, humidity },
       wind: { speed },
       weather: [{ description, icon }],
     } = data.list[0];
+    const date = dt_txt.split(" ")[0]; 
+
     return { city, date, temp, description, icon, humidity, wind: speed };
-  }
+}
+
 
   private parseForecast(data: any): Weather[] {
     return data.list
       .filter((item: any) => item.dt_txt.includes("12:00:00"))
       .map((item: any) => {
         const {
-          dt_txt: date,
+          dt_txt,
           main: { temp, humidity },
           wind: { speed },
           weather: [{ description, icon }],
         } = item;
+        const date = dt_txt.split(" ")[0];
+        
         return {
           city: data.city.name,
-          date,
+          date, 
           humidity,
           wind: speed,
           temp,
