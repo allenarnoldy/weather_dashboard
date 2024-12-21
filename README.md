@@ -1,5 +1,8 @@
 # Weather_Dashboard
 
+![Screenshot 2024-12-20 at 9 06 51 PM](https://github.com/user-attachments/assets/f847d5ea-6d59-4168-981e-4d1fc5f9ad3e)
+
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
